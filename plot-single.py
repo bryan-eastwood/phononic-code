@@ -45,7 +45,7 @@ plt.xlabel("Frequency")
 #  else:
 #    plt.xlabel(n)
 plt.tight_layout()
-plt.legend(loc='lower right')
+plt.legend(loc='lower right', prop={'size': 24})
 if(args['output']):
   plt.savefig(args['output'], dpi=300)
 plt.show()
