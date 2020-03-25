@@ -35,8 +35,8 @@ for n in range(9):
   plt.subplot(3, 3, n+1)
   plt.grid(color='gray', linestyle='-', linewidth=0.25)
   #plt.gca().set_ylim([83500,87000])
-  plt.plot(freqs1, amps1[str(n)], linewidth=0.5)
-  plt.plot(freqs2, amps2[str(n)], linewidth=0.5)
+  plt.plot(freqs1, amps1[str(n)], linewidth=0.5, label='Penrose')
+  plt.plot(freqs2, amps2[str(n)], linewidth=0.5, label='Quasicrystal')
   if(n % 3 == 0):
     plt.ylabel("Amplitude")
   if(n > 5):
@@ -44,6 +44,7 @@ for n in range(9):
   else:
     plt.xlabel(n)
 plt.tight_layout()
+plt.legend(loc='lower right')
 if(args['output']):
   plt.savefig(args['output'], dpi=300)
 plt.show()
